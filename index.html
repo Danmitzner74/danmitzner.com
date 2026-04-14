@@ -660,7 +660,169 @@
   .hero-content .hero-headline { animation: fadeUp 0.6s 0.1s ease both; }
   .hero-content .hero-sub { animation: fadeUp 0.6s 0.2s ease both; }
   .hero-content .hero-actions { animation: fadeUp 0.6s 0.3s ease both; }
+
+  /* AI POV SECTION */
+  .ai-pov {
+    background: var(--navy);
+    padding: 72px 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .ai-pov-left { }
+  .ai-pov-eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+    display: block;
+  }
+  .ai-pov-headline {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(28px, 3vw, 42px);
+    color: var(--white);
+    line-height: 1.2;
+    margin-bottom: 0;
+  }
+  .ai-pov-headline em {
+    color: var(--gold-light);
+    font-style: italic;
+  }
+  .ai-pov-right { }
+  .ai-pov-body {
+    font-size: 17px;
+    line-height: 1.75;
+    color: rgba(255,255,255,0.65);
+    margin-bottom: 24px;
+  }
+  .ai-pov-body strong {
+    color: rgba(255,255,255,0.9);
+    font-weight: 500;
+  }
+  .ai-pov-principles {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .ai-pov-principles li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 15px;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.5;
+  }
+  .ai-pov-principles li::before {
+    content: '';
+    display: block;
+    width: 16px;
+    height: 1px;
+    background: var(--gold);
+    margin-top: 11px;
+    flex-shrink: 0;
+  }
+
+  /* CONTACT FORM */
+  .contact-form {
+    max-width: 520px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    text-align: left;
+  }
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .form-field label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+  }
+  .form-field input,
+  .form-field textarea,
+  .form-field select {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 3px;
+    padding: 12px 16px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    color: var(--white);
+    outline: none;
+    transition: border-color 0.2s;
+    width: 100%;
+  }
+  .form-field input::placeholder,
+  .form-field textarea::placeholder {
+    color: rgba(255,255,255,0.25);
+  }
+  .form-field input:focus,
+  .form-field textarea:focus,
+  .form-field select:focus {
+    border-color: rgba(201,168,76,0.5);
+  }
+  .form-field textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  .form-field select option {
+    background: var(--navy);
+    color: var(--white);
+  }
+  .form-submit {
+    margin-top: 8px;
+  }
+  .form-submit .btn-primary {
+    width: 100%;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    font-family: 'DM Sans', sans-serif;
+  }
+  .form-note {
+    font-size: 12px;
+    color: rgba(255,255,255,0.25);
+    text-align: center;
+    margin-top: 4px;
+    letter-spacing: 0.03em;
+  }
+  .form-success {
+    display: none;
+    text-align: center;
+    padding: 40px 0;
+  }
+  .form-success-icon {
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+  .form-success h3 {
+    font-family: 'Instrument Serif', serif;
+    font-size: 24px;
+    color: var(--white);
+    margin-bottom: 8px;
+  }
+  .form-success p {
+    font-size: 15px;
+    color: rgba(255,255,255,0.5);
+  }
 </style>
+  <script async src="https://tally.so/widgets/embed.js"></script>
 </head>
 <body>
 
@@ -674,7 +836,7 @@
     <a href="#services">Services</a>
     <a href="#about">About</a>
     <a href="#results">Results</a>
-    <a href="#contact" class="nav-cta">Book a call</a>
+    <button class="nav-cta" data-tally-open="EkJp4q">Book a call</button>
   </div>
 </nav>
 
@@ -686,7 +848,7 @@
     <h1 class="hero-headline">Senior marketing leadership, <em>built for the stage you're actually at.</em></h1>
     <p class="hero-sub">I've been the CMO at companies like yours. Now I work with early-stage B2B SaaS founders as a fractional executive — turning marketing into a real growth lever without the cost or commitment of a full-time hire.</p>
     <div class="hero-actions">
-      <a href="#contact" class="btn-primary">Book a free call</a>
+      <button class="btn-primary" data-tally-open="EkJp4q">Book a free call</button>
       <a href="#services" class="btn-ghost">See how I work</a>
     </div>
   </div>
@@ -782,6 +944,7 @@
         <li>Positioning, messaging, or rebrand overhaul</li>
         <li>ICP definition, segmentation, and channel prioritization</li>
         <li>Marketing audit with clear gaps and recommendations</li>
+        <li>AI workflow recommendations to accelerate execution</li>
       </ul>
     </div>
     <div class="service-card featured">
@@ -792,6 +955,7 @@
       <ul class="service-features">
         <li>Build a marketing engine that generates pipeline consistently</li>
         <li>Align sales and marketing so fewer deals fall through the cracks</li>
+        <li>AI-enabled content and campaign strategies built into the marketing engine</li>
         <li>Launch products with a repeatable process that moves the needle</li>
         <li>Develop and retain a high-performing marketing team</li>
         <li>Walk into every board meeting with a clear marketing story</li>
@@ -805,6 +969,7 @@
       <p class="service-meta">Retainer · Monthly</p>
       <ul class="service-features">
         <li>Pressure-test your strategy before you commit budget to it</li>
+        <li>A grounded POV on where AI fits — and where it doesn't</li>
         <li>Get clarity on what to focus on when everything feels urgent</li>
         <li>Move faster with on-call access when decisions can't wait</li>
         <li>Avoid costly hiring and agency mistakes that slow companies down</li>
@@ -812,6 +977,23 @@
         <li>Show up to the board better prepared and more credible</li>
       </ul>
     </div>
+  </div>
+</section>
+
+
+<!-- AI POV -->
+<section class="ai-pov" id="ai-pov">
+  <div class="ai-pov-left">
+    <span class="ai-pov-eyebrow">On AI in marketing</span>
+    <h2 class="ai-pov-headline">Accelerate the strategy.<br><em>Never replace it.</em></h2>
+  </div>
+  <div class="ai-pov-right">
+    <p class="ai-pov-body">For early-stage teams with tight budgets and small crews, the right AI approach isn't a nice-to-have — <strong>it's a real competitive lever.</strong> The founders who figure out how to use it well move faster, stretch further, and punch above their weight. But only if the strategy underneath it is sound.</p>
+    <ul class="ai-pov-principles">
+      <li>AI propagates great messaging — it doesn't generate it</li>
+      <li>Efficiency only compounds when the foundation is right</li>
+      <li>The best AI-enabled marketing still sounds like a human with a point of view</li>
+    </ul>
   </div>
 </section>
 
@@ -878,12 +1060,13 @@
 <section class="cta-section" id="contact">
   <h2 class="cta-headline">Not sure which engagement is right? <em>Let's figure it out together.</em></h2>
   <p class="cta-sub">Most conversations start the same way — a founder with a marketing question they haven't been able to answer confidently. Book a free 30-minute call and we'll talk through your situation, no pitch, no pressure.</p>
-  <a href="#" class="btn-primary">Book a free call</a>
+  <button class="btn-primary" data-tally-open="EkJp4q">Book a free call</button>
   <p class="cta-disclaimer">30 minutes. No commitment. Just a conversation.</p>
+
   <div class="cta-secondary">
-    <a href="#">Connect on LinkedIn</a>
+    <a href="https://www.linkedin.com/in/danmitzner" target="_blank">Connect on LinkedIn</a>
     <div class="cta-divider"></div>
-    <a href="/cdn-cgi/l/email-protection#afcbcec1c6cac3c2c6dbd5c1caddefc8c2cec6c381ccc0c2">Send an email</a>
+    <a href="mailto:dan@danmitzner.com">Send an email</a>
   </div>
 </section>
 
@@ -894,6 +1077,14 @@
 </footer>
 
 <script>
+  function handleSubmit(e) {
+    e.preventDefault();
+    var form = document.getElementById('contact-form');
+    var success = document.getElementById('form-success');
+    form.style.display = 'none';
+    success.style.display = 'block';
+  }
+
   var nav = document.getElementById('nav');
   var logoDark = document.getElementById('logo-dark');
   var logoLight = document.getElementById('logo-light');
