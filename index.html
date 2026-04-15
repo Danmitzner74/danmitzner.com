@@ -155,8 +155,8 @@
   .hero-tagline span {
     font-family: 'Instrument Serif', serif;
     font-style: italic;
-    font-size: 14px;
-    color: rgba(255,255,255,0.45);
+    font-size: 16px;
+    color: rgba(255,255,255,0.7);
     letter-spacing: 0.02em;
   }
 
@@ -210,11 +210,14 @@
     font-weight: 500;
     padding: 14px 32px;
     border-radius: 2px;
+    border: none;
+    box-shadow: none;
     text-decoration: none;
     letter-spacing: 0.05em;
-    transition: background 0.2s, transform 0.15s;
+    cursor: pointer;
+    transition: background 0.2s;
   }
-  .btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
+  .btn-primary:hover { background: var(--gold-light); }
   .btn-ghost {
     display: inline-flex;
     align-items: center;
@@ -250,11 +253,11 @@
     border-bottom: 1px solid rgba(255,255,255,0.06);
   }
   .logo-bar-label {
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 500;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: rgba(255,255,255,0.3);
+    color: rgba(255,255,255,0.55);
     margin-bottom: 28px;
     text-align: center;
   }
@@ -704,6 +707,7 @@
   .ai-pov-headline {
     font-family: 'Instrument Serif', serif;
     font-size: clamp(28px, 3vw, 42px);
+    font-weight: 400;
     color: var(--white);
     line-height: 1.2;
     margin-bottom: 0;
